@@ -1,0 +1,591 @@
+@import "_helper";
+
+//? Start Scroll To Top Button
+#to-top {
+    width: 40px;
+    height: 40px;
+    border: none;
+    outline: none;
+    position: fixed;
+    bottom: 20px;
+    right: -1000px;
+    cursor: pointer;
+    background-color: $Black;
+    z-index: 99;
+    @include flexbox(center, center, row);
+    @include bRad(15px);
+    @include transDur($mainDur);
+    i {
+        color: $mainColor;
+        font-size: 20px;
+        @include transDur($mainDur);
+    }
+    &:hover i {
+        @include transY(-4px);
+    }
+}
+//? End Scroll To Top Button
+//* Start Header Section
+header {
+    background-color: $Black;
+    padding-block: 30px;
+    .container {
+        h1 {
+            margin: 0;
+            color: #fff;
+            font-size: 28px;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            text-align: center;
+            user-select: none;
+            @include flexbox(center, center, row);
+            @media (max-width: 400px) {
+                font-size: 20px;
+            }
+            img {
+                width: 40px;
+                position: relative;
+                top: -4px;
+                user-select: none;
+                -webkit-user-drag: none;
+            }
+            span {
+                color: $mainColor;
+                margin-left: 3px;
+                margin-right: 10px;
+            }
+        }
+    }
+}
+//* End Header Section
+//^ Start Landing Section
+.landing {
+    height: calc(100vh - 87px);
+    @include bg("../../images/landing_bg.jpeg", auto, cover);
+    .container {
+        div {
+            width: 35%;
+            height: 50%;
+            padding: 15px;
+            @include flexbox(space-evenly, flex-start, column);
+            gap: 35px;
+            position: absolute;
+            bottom: 20px;
+            background-color: rgba($color: $Black, $alpha: 0.7);
+            border-top: 7px solid $mainColor;
+            color: #fff;
+            @media (max-width: 767px) {
+                width: 80%;
+                height: 75%;
+                left: 50%;
+                @include transX(-50%);
+            }
+            h2 {
+                text-transform: uppercase;
+                font-size: 30px;
+            }
+            p {
+                font-style: italic;
+                line-height: 1.5;
+                font-size: 14px;
+            }
+            button {
+                padding: 10px 25px;
+                border: 1px solid $mainColor;
+                background: linear-gradient(
+                    -90deg,
+                    transparent 50%,
+                    $mainColor 50%
+                );
+                background-position: right;
+                background-size: 200%;
+                color: #fff;
+                text-transform: uppercase;
+                cursor: pointer;
+                outline: none;
+                @include transDur($mainDur);
+                &:hover {
+                    background-position: left;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+//^ End Landing Section
+//& Start Welcome Section
+.welcome {
+    padding-block: 50px;
+    .container {
+        @include flexbox(center, center, row);
+        gap: 60px;
+        & > div {
+            flex-basis: calc(50% - 30px);
+        }
+        @media (max-width: 767px) {
+            flex-direction: column;
+        }
+        .img {
+            @media (max-width: 767px) {
+                width: 90%;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .msg {
+            @media (max-width: 767px) {
+                width: 100%;
+                text-align: center;
+            }
+            h2 {
+                text-transform: uppercase;
+                color: $mainColor;
+                i {
+                    margin-right: 10px;
+                }
+            }
+            p {
+                margin-block: 25px;
+                line-height: 2;
+                font-size: 14px;
+            }
+            button {
+                background-color: $mainColor;
+                color: #fff;
+                border: none;
+                outline: none;
+                text-transform: uppercase;
+                padding: 10px 30px;
+                cursor: pointer;
+                border: 4px solid transparent;
+                @include transDur($mainDur);
+                &:hover {
+                    border-color: $Black;
+                }
+                @media (max-width) {
+                    padding: 10px 150px;
+                }
+            }
+        }
+    }
+}
+//& End Welcome Section
+//! Start Cards Section
+.cards {
+    padding-block: 80px;
+    background-color: $Grey;
+    .container {
+        h2 {
+            color: $mainColor;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 80px;
+            i {
+                color: $mainColor;
+                margin-inline: 10px;
+            }
+        }
+        .content {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            & > div {
+                border: 2px solid $mainColor;
+                @include flexbox(center, center, column);
+                .img {
+                    width: 100%;
+                    height: 350px;
+                    overflow: hidden;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        @include transDur($mainDur);
+                        &:hover {
+                            @include imgEffect(1.1, 2deg);
+                        }
+                    }
+                }
+                .txt {
+                    width: 100%;
+                    padding-block: 20px;
+                    background-color: $Black;
+                    text-align: center;
+                    h3 {
+                        text-transform: uppercase;
+                        color: $mainColor;
+                        i {
+                            margin-inline: 8px;
+                        }
+                    }
+                    p {
+                        color: #fff;
+                        font-style: italic;
+                        font-size: 14px;
+                        line-height: 2;
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+//! End Cards Section
+//& Start Numbers Section
+.numbers {
+    padding-block: 50px;
+    background-color: $Black;
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        div {
+            padding: 50px 25px;
+            @include flexbox(center, center, column);
+            gap: 10px;
+            color: #fff;
+            i {
+                font-size: 30px;
+                color: $mainColor;
+            }
+            span {
+                font-size: 38px;
+                font-weight: bold;
+            }
+            h6 {
+                font-weight: normal;
+                font-size: 18px;
+                color: $mainColor;
+            }
+        }
+    }
+}
+//& End Numbers Section
+//? Start Quote Section
+.quote {
+    padding-block: 150px;
+    @include bg("../../images/quote_bg.jpeg", center, cover);
+    position: relative;
+    &::before {
+        @include overlay;
+    }
+    .container {
+        position: relative;
+        @include flexbox(center, center, column);
+        q {
+            quotes: "\f10d""\f10e";
+            margin-bottom: 50px;
+            position: relative;
+            color: #fff;
+            text-align: center;
+            font-weight: bold;
+            font-size: 26px;
+            &::before,
+            &::after {
+                font-size: 18px;
+                font-family: "Font Awesome 5 Free";
+                margin-inline: 7px;
+            }
+        }
+        button {
+            padding: 10px 25px;
+            border: 3px solid $mainColor;
+            background: linear-gradient(
+                -90deg,
+                transparent 50%,
+                $mainColor 50%
+            );
+            background-position: right;
+            background-size: 200%;
+            color: #fff;
+            text-transform: uppercase;
+            cursor: pointer;
+            outline: none;
+            @include transDur($mainDur);
+            &:hover {
+                background-position: left;
+                color: #fff;
+            }
+        }
+    }
+}
+//? End Quote Section
+//* Start Gallery Section
+.coaches {
+    padding-block: 50px;
+    .container {
+        h2 {
+            color: $mainColor;
+            text-transform: uppercase;
+            text-align: center;
+            i {
+                color: $mainColor;
+                margin-inline: 10px;
+            }
+        }
+        p {
+            margin-block: 30px;
+            text-align: center;
+            font-size: 14px;
+        }
+        .content {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 50px;
+            .coach {
+                height: 350px;
+                border: 2px solid $mainColor;
+                position: relative;
+                overflow: hidden;
+                .img {
+                    height: 100%;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        @include transDur($mainDur);
+                    }
+                }
+                .info {
+                    width: 100%;
+                    height: 50%;
+                    position: absolute;
+                    bottom: -1000px;
+                    left: 0;
+                    background-color: rgba($color: $Black, $alpha: 0.9);
+                    color: $mainColor;
+                    @include transDur($mainDur);
+                    @include flexbox(center, center, column);
+                    h4 {
+                        font-size: 24px;
+                        margin-bottom: 25px;
+                    }
+                    div {
+                        a {
+                            font-size: 20px;
+                            color: #fff;
+                            margin-inline: 10px;
+                            text-decoration: none;
+                            @include transDur($mainDur);
+                            &:hover {
+                                color: $mainColor;
+                            }
+                        }
+                    }
+                }
+                &:hover {
+                    .img {
+                        img {
+                            @include imgEffect(1.2, 2deg);
+                        }
+                    }
+                    .info {
+                        bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+//* End Coaches Section
+//^ Start Questions Section
+.questions {
+    padding-block: 50px;
+    background-color: $Grey;
+    .container {
+        @include flexbox(space-around, center, row);
+        @media (max-width: 767px) {
+            flex-direction: column;
+            gap: 20px 0;
+        }
+        form {
+            flex-basis: 60%;
+            @include flexbox(center, center, column);
+            gap: 20px;
+            @media (max-width: 767px) {
+                flex-basis: 100%;
+                align-items: center;
+            }
+            h2 {
+                margin-bottom: 15px;
+                color: $mainColor;
+                text-transform: uppercase;
+                i {
+                    margin-inline: 10px;
+                }
+            }
+            div {
+                align-self: flex-start;
+                position: relative;
+                width: 100%;
+                @include flexbox(center, center, row);
+                gap: 20px;
+                .wrapper {
+                    width: calc(50% - 10px);
+                    height: 100%;
+                    input {
+                        width: 100%;
+                        height: 100%;
+                        padding: 10px;
+                        border: 2px solid $Black;
+                        outline: none;
+                        color: $mainColor;
+                        caret-color: $mainColor;
+                        &:focus {
+                            border-color: $mainColor;
+                        }
+                    }
+                    span {
+                        position: absolute;
+                        top: 12px;
+                        left: 12px;
+                        color: #777;
+                        @include transDur($mainDur);
+                    }
+                    span.has-data {
+                        top: -22px;
+                        left: 2px;
+                        color: $mainColor;
+                        @include transDur($mainDur);
+                    }
+                }
+            }
+            textarea {
+                width: 100%;
+                height: 200px;
+                padding: 20px;
+                resize: none;
+                border: 2px solid $Black;
+            }
+            button {
+                width: 100%;
+                padding: 10px;
+                background-color: $mainColor;
+                color: #fff;
+                font-weight: bold;
+                text-transform: uppercase;
+                letter-spacing: 5px;
+                outline: none;
+                border: 3px solid transparent;
+                cursor: pointer;
+                @include transDur($mainDur);
+                &:hover {
+                    letter-spacing: 8px;
+                    border-color: $Black;
+                }
+            }
+        }
+    }
+}
+//^ End Questions Section
+//! Start Clients Section
+section.clients {
+    padding-block: 50px;
+    position: relative;
+    @include bg("../../images/clients_bg.jpeg", center, cover);
+    &::before {
+        @include overlay;
+    }
+    .container {
+        position: relative;
+        h2 {
+            text-align: center;
+            text-transform: uppercase;
+            position: relative;
+            color: #fff;
+            @media (max-width: 767px) {
+                font-size: 18px;
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: -15px;
+                left: calc(50% - 40px);
+                width: 80px;
+                height: 3px;
+                background-color: $mainColor;
+            }
+            i {
+                margin-inline: 10px;
+                color: $mainColor;
+            }
+        }
+        .content {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fill,
+                minmax(calc(50% - 50px), 1fr)
+            );
+            gap: 100px;
+            margin-top: 200px;
+            @media (max-width: 767px) {
+                grid-template-columns: 1fr;
+            }
+            .client {
+                position: relative;
+                img {
+                    width: 120px;
+                    position: absolute;
+                    top: -65px;
+                    left: -50px;
+                    @include bRad(50%);
+                    @media (max-width: 767px) {
+                        top: -75px;
+                        left: calc(50% - 60px);
+                    }
+                }
+                div {
+                    padding: 50px;
+                    background-color: #fff;
+                    border: 2px solid $Black;
+                    @include bRad(15px);
+                    @include flexbox(center, center, column);
+                    p {
+                        line-height: 2;
+                        align-self: flex-start;
+                        margin-bottom: 25px;
+                    }
+                    span {
+                        align-self: flex-end;
+                        font-weight: bold;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+//! End Clients Section
+//? Start Footer Section
+footer {
+    padding-block: 50px;
+    background-color: $Black;
+    .container {
+        color: #fff;
+        text-align: center;
+        @include flexbox(center, center, column);
+        p {
+            line-height: 2;
+            i.fa-heart {
+                color: $mainColor;
+                margin-inline: 5px;
+            }
+            a {
+                color: $mainColor;
+                font-weight: bold;
+                text-decoration: none;
+            }
+        }
+        div {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 5px dashed #fff;
+            a {
+                margin-inline: 10px;
+                font-size: 22px;
+                text-decoration: none;
+                color: $mainColor;
+            }
+        }
+    }
+}
+//? End Footer Section

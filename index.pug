@@ -1,0 +1,255 @@
+doctype html
+html(lang="en")
+    //- Start Mixins
+    
+    //- End Mixins
+    head
+        //- Start Meta Tags
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        //- End Meta Tags 
+        //- Start Page Title 
+        title Fitness Club Template
+        //- End Page Title
+        //- Start Page Title Icon
+        link(rel="shortcut icon" type="image/x-icon" href="images/dumbbell.png")
+        //- End Page Title Icon
+        //- Start Google Fonts
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap")
+        //- End Google Fonts
+        //- Start Normalize Library 
+        link(rel="stylesheet" href="style/css/libraries/normalize.min.css")
+        //- End Normalize Library 
+        //- Start Font Awesome Library 
+        link(rel="stylesheet" href="style/css/libraries/fontawesome.min.css")
+        //- End Font Awesome Library 
+        //- Start Main CSS File 
+        link(rel="stylesheet" href="style/css/main.css")
+        //- End Main CSS File 
+    body
+        //- Start Scroll To Top Button
+        button#to-top
+            i.fas.fa-chevron-up
+        //- End Scroll To Top Button
+        //- Start Header Section
+        header
+            .container
+                h1 
+                    |fi
+                    img(src="images/barbell.png")
+                    span ness
+                    | Club
+        //- End Header Section
+        //- Start Landing Section
+        section.landing
+            .container
+                div
+                    h2 get ready for fitness
+                    p 
+                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        | Vivamus placerat lorem eu mattis vulputate. In ut accumsan lacus. Donec sit amet nisl arcu.
+                    button join now
+        //- End Landing Section
+        //- Start Welcome Section
+        section.welcome 
+            .container 
+                .img
+                    img(src="images/welcome.jpeg")
+                .msg 
+                    h2
+                        i.fas.fa-dumbbell
+                        | welcome to our fitness club
+                    p 
+                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus placerat lorem eu mattis vulputate.
+                        | In ut accumsan lacus. Donec sit amet nisl arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus.
+                    p
+                        | Placerat lorem eu mattis vulputate. In ut accumsan lacus. Donec sit amet nisl arcu. Donec sit amet nisl arcu.
+                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    button read more
+        //- End Welcome Section
+        //- Start Cards Section
+        section.cards 
+            .container
+                h2 
+                    i.fas.fa-dumbbell
+                    | activities
+                    i.fas.fa-dumbbell
+                .content 
+                    div
+                        .img
+                            img(src="images/card_02.jpeg")
+                        .txt
+                            h3 
+                                i.fas.fa-dumbbell
+                                | fitness
+                                i.fas.fa-dumbbell
+                            p Nulla imperdiet odio sit amet est vehicula condimentum congue dui
+                    div
+                        .img
+                            img(src="images/card_03.jpeg")
+                        .txt
+                            h3 
+                                i.fas.fa-dumbbell
+                                | resistance training
+                                i.fas.fa-dumbbell
+                            p Nulla imperdiet odio sit amet est vehicula condimentum congue dui
+                    div
+                        .img
+                            img(src="images/card_06.jpeg")
+                        .txt
+                            h3 
+                                i.fas.fa-dumbbell
+                                | cardio
+                                i.fas.fa-dumbbell
+                            p Nulla imperdiet odio sit amet est vehicula condimentum congue dui
+                    div
+                        .img
+                            img(src="images/card_01.jpeg")
+                        .txt
+                            h3 
+                                i.fas.fa-dumbbell
+                                | aerobics
+                                i.fas.fa-dumbbell
+                            p Nulla imperdiet odio sit amet est vehicula condimentum congue dui
+                    div
+                        .img
+                            img(src="images/card_04.jpeg")
+                        .txt
+                            h3 
+                                i.fas.fa-dumbbell
+                                | boxing
+                                i.fas.fa-dumbbell
+                            p Nulla imperdiet odio sit amet est vehicula condimentum congue dui
+                    div
+                        .img
+                            img(src="images/card_05.jpeg")
+                        .txt
+                            h3 
+                                i.fas.fa-dumbbell
+                                | yoga
+                                i.fas.fa-dumbbell
+                            p Nulla imperdiet odio sit amet est vehicula condimentum congue dui
+        //- End Cards Section
+        //- Start Numbers Section
+        section.numbers 
+            .container 
+                div 
+                    i.fas.fa-receipt
+                    span.scroll-counter#trainings 11
+                    h6 Training Programs
+                div 
+                    i.fas.fa-grin-beam
+                    span.scroll-counter#happy-cost 562
+                    h6 Happy Customers
+                div 
+                    i.fas.fa-dumbbell 
+                    span.scroll-counter#working-hours 1470
+                    h6 Working Hours
+                div 
+                    i.fas.fa-medal 
+                    span.scroll-counter#awards 23
+                    h6 International Awards
+        //- End Numbers Section
+        //- Start Quote Section
+        section.quote
+            .container 
+                q Don’t wish for a good body, work for it.
+                button start now
+        //- End Quote Section
+        //- Start Coaches Section
+        section.coaches
+            .container
+                h2
+                    i.fas.fa-dumbbell
+                    | meet our crew
+                    i.fas.fa-dumbbell
+                p Sed rhoncus egestas felis, sit amet condimentum sem ultricies at malesuada, tortor sit amet.
+                .content
+                    .coach 
+                        .img 
+                            img(src="images/coach_01.jpeg")
+                        .info 
+                            h4 Matt Murdock
+                            div 
+                                a.fab.fa-facebook-f(href="#")
+                                a.fab.fa-twitter(href="#")
+                                a.fab.fa-instagram(href="#")
+                    .coach 
+                        .img 
+                            img(src="images/coach_02.jpeg")
+                        .info 
+                            h4 Sarah Smith
+                            div 
+                                a.fab.fa-facebook-f(href="#")
+                                a.fab.fa-twitter(href="#")
+                                a.fab.fa-instagram(href="#")
+                    .coach 
+                        .img 
+                            img(src="images/coach_03.jpeg")
+                        .info 
+                            h4 Walter White
+                            div 
+                                a.fab.fa-facebook-f(href="#")
+                                a.fab.fa-twitter(href="#")
+                                a.fab.fa-instagram(href="#")
+        //- End Coaches Section
+        //- Start Questions Section
+        section.questions 
+            .container 
+                form
+                    h2 
+                        i.fas.fa-dumbbell
+                        | Contact Us
+                        i.fas.fa-dumbbell
+                    div 
+                        .wrapper
+                            input(type="text" id="userName" required)
+                            span#uName Your Name
+                        .wrapper
+                            input(type="email" id="userEmail" required)
+                            span#uEmail Your Email
+                    textarea(placeholder="Your Message")
+                    button(type="submit") submit 
+        //- End Questions Section
+        //- Start Clients Section
+        section.clients
+            .container 
+                h2 
+                    i.fas.fa-dumbbell
+                    | what our clients say
+                    i.fas.fa-dumbbell
+                .content 
+                    .client 
+                        img(src="images/client_01.jpeg")
+                        div 
+                            p Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.
+                            span - Walter White
+                    .client 
+                        img(src="images/client_02.jpeg")
+                        div 
+                            p Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.
+                            span - Saul Goodman
+        //- End Clients Section
+        //- Start Footer Section
+        footer
+            .container 
+                p Copyrights - 2021 &copy;
+                p All Rights Reserved &reg;
+                p 
+                    | Designed & Developed With
+                    i.fas.fa-heart
+                    | By
+                    a(href="https://github.com/PhilopaterHany" target="_blank")  Philopater Hany
+                div 
+                    a.fab.fa-facebook-f(href="https://facebook.com/philopater.hany.3" target="_blank")
+                    a.fab.fa-twitter(href="https://twitter.com/PhilopaterHany4" target="_blank")
+                    a.fab.fa-discord(href="https://discord.com/#8178" target="_blank")
+                    a.fab.fa-codepen(href="https://codepen.io/Rafay12" target="_blank")
+                    a.fab.fa-github(href="https://github.com/PhilopaterHany" target="_blank")
+        //- End Footer Section
+        //- Start Main JavaScript File
+        script(src="js/master.js")
+        //- End Main JavaScript File
