@@ -1,16 +1,5 @@
-// Declaring Variables
-const scrllBtn = document.getElementById("to-top");
-const nameInp = document.getElementById("userName");
-const emailInp = document.getElementById("userEmail");
-const nameHolder = document.getElementById("uName");
-const emailHolder = document.getElementById("uEmail");
-const elements = document.querySelectorAll(".scroll-counter");
-const trainings = document.querySelector("#trainings");
-const happy = document.querySelector("#happy-cost");
-const working = document.querySelector("#working-hours");
-const awards = document.querySelector("#awards");
-
 // Scroll To Top Button
+const scrllBtn = document.getElementById("to-top");
 scrllBtn.onclick = () => {
     window.scrollTo({
         top: 0,
@@ -20,6 +9,10 @@ scrllBtn.onclick = () => {
 };
 
 // Input Placeholder Function
+const nameInp = document.getElementById("userName");
+const emailInp = document.getElementById("userEmail");
+const nameHolder = document.getElementById("uName");
+const emailHolder = document.getElementById("uEmail");
 function inputControl(input, holder) {
     holder.onclick = () => input.focus();
     input.onfocus = () => {
@@ -35,6 +28,7 @@ inputControl(nameInp, nameHolder);
 inputControl(emailInp, emailHolder);
 
 // Counters
+const elements = document.querySelectorAll(".scroll-counter");
 document.addEventListener("DOMContentLoaded", () => {
     elements.forEach((item) => {
         item.counterAlreadyFired = false;
@@ -94,3 +88,6 @@ document.addEventListener("DOMContentLoaded", () => {
         handleScroll();
     };
 });
+
+// Putting Year at Footer
+document.querySelector("footer .year").innerHTML = new Date().getFullYear();
